@@ -1,0 +1,33 @@
+network,category,referenda,usd_at_approval,usd_same_tokens_today,agentic_low_usd,agentic_high_usd
+kusama,Business development and partnerships,17,2484841,364467,1987873,2484841
+kusama,Core protocol and clients,6,1398358,164849,643245,1020802
+kusama,Developer tooling and SDKs,8,433128,47096,101785,179748
+kusama,Education and talent,6,128424,14749,74486,97603
+kusama,Events and community,30,462824,51402,404971,451253
+kusama,"Explorers, data and indexing",20,1248520,400482,461953,593047
+kusama,Governance tooling,9,473932,56639,68720,111374
+kusama,Grants and incubation programmes,5,114188,19505,59378,79932
+kusama,Infrastructure operations,19,3305035,521782,2495302,2842330
+kusama,"Legal, administration and treasury operations",6,72060,8806,41795,61972
+kusama,"Liquidity, loans and incentives",5,4211861,457357,4211861,4211861
+kusama,Marketing and media,15,662520,65970,450513,530016
+kusama,Research,1,9758,925,4489,8002
+kusama,Security and audits,6,325054,49885,149525,266545
+kusama,Uncategorised,35,236912,58114,137409,194268
+kusama,Wallets and user apps,4,240260,23975,66672,107516
+polkadot,Business development and partnerships,41,31442758,9507337,25154206,31442758
+polkadot,Core protocol and clients,26,28128655,9612801,12939181,20533918
+polkadot,Developer tooling and SDKs,85,18872009,7985184,4434922,7831884
+polkadot,Education and talent,47,14267062,8305215,8274896,10842967
+polkadot,Events and community,208,25438423,6207604,22258620,24802463
+polkadot,"Explorers, data and indexing",39,11100052,4531793,4107019,5272525
+polkadot,Governance tooling,17,5954283,2858152,863371,1399257
+polkadot,Grants and incubation programmes,10,3179614,851162,1653399,2225730
+polkadot,Infrastructure operations,30,14060395,3065734,10615598,12091940
+polkadot,"Legal, administration and treasury operations",19,2356032,848378,1366498,2026187
+polkadot,"Liquidity, loans and incentives",22,62232070,14148368,62232070,62232070
+polkadot,Marketing and media,99,40279403,7075619,27389994,32223523
+polkadot,Research,11,2917023,716591,1341831,2391959
+polkadot,Security and audits,19,10662886,4347110,4904927,8743566
+polkadot,Uncategorised,57,1528854,1131613,886735,1253660
+polkadot,Wallets and user apps,43,17469169,8403737,4847694,7817453

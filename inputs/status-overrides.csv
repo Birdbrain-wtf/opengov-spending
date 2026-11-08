@@ -1,0 +1,3 @@
+network,referendum,payout_status,counted,note
+polkadot,944,failed (USDC part re-approved in ref 1696),partial,"The USDC spend in ref 944 failed for lack of USDC and was marked paid; ref 1696 re-issued it. The USDC line of 944 is not counted."
+polkadot,1768,failed (re-approved in ref 1790),no,"Execution error during the Asset Hub migration; ref 1790 re-approved the same 180,000 USDC."
