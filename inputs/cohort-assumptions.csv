@@ -1,0 +1,6 @@
+key,low,high,label,rationale
+people,10,15,assumption (Birdbrain estimate),"A small cohort of experienced engineers, designers and operators, each directing agents across several products at once."
+cost_per_person_year_usd,180000,250000,assumption (Birdbrain estimate),"Fully loaded cost of a senior person paid in stablecoins, comparable to the day rates in the referenda."
+years,4,4,matches the data,"OpenGov ran from November 2022 on Kusama and June 2023 on Polkadot. Four years covers the period."
+inference_per_person_year_usd,20000,60000,assumption (Birdbrain estimate),"Heavy daily agent use. Far above what a single interface costs, to allow for long-running agents, review passes and failed attempts."
+external_signoff_usd,1500000,3000000,assumption (Birdbrain estimate),"Independent audits and named reviewers for consensus-critical and key-handling code, bought from outside the cohort."

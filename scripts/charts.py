@@ -38,6 +38,6 @@ ax.xaxis.grid(True,color='#ebeae6'); ax.set_axisbelow(True)
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color='#9a9890',label='Approved, 2022 to 2026'),Patch(color=C['Software and infrastructure'],label='Today, upper estimate: software and infrastructure'),Patch(color=C['People, judgement and reach'],label='Today, upper estimate: people, judgement and reach'),Patch(color=C['Capital deployed'],label='Today: capital deployed (unchanged)')],frameon=False,loc='lower right',fontsize=9)
 ax.set_title('What the same work might cost with agentic development',loc='left',color=INK,fontsize=14,pad=14)
-fig.text(0.01,0.01,'Estimates are Birdbrain assumptions, not measurements. Each category: labour share x share of labour that remains. See data/agentic-cost-model.csv.',fontsize=8.5,color='#52514e')
+fig.text(0.01,0.01,'Second edition. Birdbrain assumptions, not measurements: labour share x share of labour that remains. See data/agentic-cost-model.csv.',fontsize=8.5,color='#52514e')
 fig.tight_layout(rect=(0,0.03,1,1)); fig.savefig(f'{OUT}/charts/cost-today-by-category.png',dpi=160); plt.close(fig)
 print('ok')

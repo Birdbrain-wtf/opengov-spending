@@ -76,3 +76,20 @@ json.dump(S,open(f'{OUT}/../summary.json','w'),indent=1,default=list)
 print(json.dumps(S['totals'],indent=1)); print(json.dumps(S['groups'],indent=1)); print(S['gov'])
 for o in S['by-category']: print(f"{o['category']:48s} {o['usd_at_approval']/1e6:7.2f} {o['agentic_low_usd']/1e6:6.2f}-{o['agentic_high_usd']/1e6:6.2f}")
 for o in S['by-year']: print(o)
+C={r['key']:r for r in csv.DictReader(open(os.path.join(os.path.dirname(ASSUME),'cohort-assumptions.csv')))}
+sw=[o for o in S['by-category'] if o['group']=='Software and infrastructure']
+spend=sum(o['usd_at_approval'] for o in sw)
+nonlab=sum(o['usd_at_approval']*(1-float(A[o['category']]['labour_share'])) for o in sw)
+def cohort(s):
+    g=lambda k:float(C[k][s])
+    p=g('people')*g('cost_per_person_year_usd')*g('years'); i=g('people')*g('inference_per_person_year_usd')*g('years')
+    return dict(people=p,inference=i,external_signoff=g('external_signoff_usd'),non_labour_from_data=nonlab,total=p+i+g('external_signoff_usd')+nonlab)
+lo,hi=cohort('low'),cohort('high')
+with open(f'{OUT}/data/cohort-scenario.csv','w',newline='') as f:
+    w=csv.writer(f); w.writerow(['line','low_usd','high_usd','source'])
+    src={'people':'inputs/cohort-assumptions.csv','inference':'inputs/cohort-assumptions.csv','external_signoff':'inputs/cohort-assumptions.csv','non_labour_from_data':'approved software spend x (1 - labour share), inputs/model-assumptions.csv','total':'sum'}
+    for k in lo: w.writerow([k,round(lo[k]),round(hi[k]),src[k]])
+    w.writerow(['software_and_infrastructure_approved',round(spend),round(spend),'data/summary-by-category.csv'])
+S['cohort']={'low':{k:round(v) for k,v in lo.items()},'high':{k:round(v) for k,v in hi.items()},'software_approved':round(spend),'software_labour_approved':round(spend-nonlab)}
+json.dump(S,open(f'{OUT}/../summary.json','w'),indent=1,default=list)
+print(S['cohort'])

@@ -13,7 +13,8 @@ Every treasury spend Kusama and Polkadot approved through OpenGov, from November
 | Paid in DOT or KSM | 82% |
 | Those tokens at 8 November 2026 prices | 15% of their value on the day |
 | Software and infrastructure share | 37% |
-| Same work with agentic development (assumptions) | US$204.6m to US$246.4m |
+| Software and infrastructure with agentic development (assumptions) | US$31.8m to US$43.5m |
+| Whole bill with agentic development (assumptions) | US$179.5m to US$205.8m |
 
 ## The spreadsheet
 
@@ -27,6 +28,7 @@ GitHub shows each CSV as a searchable table. The same tables are in one workbook
 | [`data/summary-by-category.csv`](data/summary-by-category.csv) | Totals by category |
 | [`data/summary-by-network-category.csv`](data/summary-by-network-category.csv) | Totals by network and category |
 | [`data/agentic-cost-model.csv`](data/agentic-cost-model.csv) | The model's assumptions, with the reasoning for each, and its results |
+| [`data/cohort-scenario.csv`](data/cohort-scenario.csv) | Cross-check: the software bill as a small cohort directing agents for four years |
 | [`data/governance-tooling.csv`](data/governance-tooling.csv) | Every governance tooling spend, by platform |
 | [`data/raw-prices/`](data/raw-prices/) | Daily DOT and KSM prices used |
 

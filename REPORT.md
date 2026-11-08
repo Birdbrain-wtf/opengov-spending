@@ -1,18 +1,19 @@
 # What Kusama and Polkadot paid to build themselves, and what the same work costs now
 
-Birdbrain · first edition, 8 November 2026 · data to 8 November 2026
+Birdbrain · second edition, 8 November 2026 · data to 8 November 2026
 
 Kusama and Polkadot have run their treasuries through OpenGov since late 2022 and mid 2023. Every approved spend is on chain, which makes them two of the best-documented public budgets for building and growing a network. This report totals that spending, prices it in US dollars, and asks a narrower question: if a new network started today and leaned on agentic development, how much of that bill would it still face?
 
-The short answer is that the software bill has fallen a long way and the rest has not. Most of what these treasuries paid for was never software. It was choosing what to back, reaching people and deploying capital, and that is the part agents do not make cheaper.
+The short answer is that the software bill has collapsed and the rest has not. A small cohort of talented people directing agents can now build and run most of what these treasuries paid companies to build. Most of the money was never software, though. It was choosing what to back, reaching people and deploying capital, and that is the part agents do not make cheaper.
 
 ## Summary
 
 1. **US$305.7m approved.** Polkadot US$289.9m (June 2023 to now), Kusama US$15.8m (November 2022 to now), across 965 referenda and 1,337 spend lines, priced in dollars on the day each referendum was enacted.
 2. **The DOT and KSM paid out are worth 15% of what they were on the day.** 82% of the money, US$251.6m, was paid in the native tokens. At 8 November 2026 prices (DOT US$0.894, KSM US$3.19) those tokens are worth US$37.8m. Stablecoins went from none of the spending in 2023 to 41% in 2025 and 75% so far in 2026.
 3. **Software and infrastructure was 37% of the bill (US$113.7m).** People, judgement and reach (marketing, events, business development, education, grants, research, legal) was 41% (US$125.6m). Capital deployed into liquidity, loans and incentives was 22% (US$66.4m).
-4. **On our assumptions, agentic development cuts the software share by 40% to 59%,** to between US$46.7m and US$68.8m. Governance tooling falls furthest, from US$6.4m to between US$0.9m and US$1.5m.
-5. **The whole bill falls by only 19% to 33%,** to between US$204.6m and US$246.4m, because most of it was not software to begin with.
+4. **On our assumptions, agentic development cuts the software share by 62% to 72%,** to between US$31.8m and US$43.5m. A cohort of 10 to 15 people directing agents for four years lands in the same place, US$33.8m to US$45.9m, and most of that is hardware and bandwidth, not people.
+5. **Governance interfaces fall furthest.** We are building one for Kabocha that we expect to take about half an hour of agent time and under US$1 of inference. OpenGov paid US$4.8m for two of them.
+6. **The whole bill falls by only 33% to 41%,** to between US$179.5m and US$205.8m, because most of it was not software to begin with.
 
 ![Spending by year](charts/spend-by-year.png)
 
@@ -57,18 +58,20 @@ Two things follow. A supplier paid in DOT or KSM with costs in dollars, pounds o
 
 ## 3. What agentic development changes
 
-We split each category into a labour share (the part that paid people to write code, content or analysis) and everything else (hardware, venues, media buys, sponsorships, capital). Then we assume what fraction of that labour a team directing coding agents would still need. Cost today is:
+We split each category into a labour share (the part that paid people to write code, content or analysis) and everything else (hardware, venues, media buys, sponsorships, capital). Then we assume what fraction of that labour a small, experienced team directing coding agents would still need. Cost today is:
 
 > spend × ((1 − labour share) + labour share × labour still needed)
 
-Every input is an assumption, labelled as one in [`data/agentic-cost-model.csv`](data/agentic-cost-model.csv), with the reasoning for each. Change them and the model reruns with `scripts/run.sh`. They are not measurements. The best controlled evidence is still thin: METR's randomised trial found experienced open-source developers 19% slower with early-2025 tools[^metr2025], and its February 2026 follow-up estimated an 18% speed-up for returning developers, with an interval from 38% faster to 9% slower, and called its own signal unreliable because developers withheld the tasks they least wanted to do without AI[^metr2026]. Our settings assume more than a trial has shown. They reflect what we see building with agents every day, where the gain is largest for well-specified product work against open code, and smallest where review and liability set the pace.
+Every input is an assumption, labelled as one in [`data/agentic-cost-model.csv`](data/agentic-cost-model.csv), with the reasoning for each. Change them and the model reruns with `scripts/run.sh`. They are not measurements. The best controlled evidence is still thin: METR's randomised trial found experienced open-source developers 19% slower with early-2025 tools[^metr2025], and its February 2026 follow-up estimated an 18% speed-up for returning developers, with an interval from 38% faster to 9% slower, and called its own signal unreliable because developers withheld the tasks they least wanted to do without AI[^metr2026]. Our settings assume far more than a trial has shown, and this edition is deliberately more aggressive than the first. Those trials measure developers adding agents to their existing way of working. The change we see building with agents every day is different in kind: one person specifies, several agents build and test in parallel, and the person reviews. The gain is largest for well-specified product work against open code, where we now assume 2% to 15% of the old labour remains, and smallest where review and liability set the pace (core protocol and audits, 15% to 35%).
 
 | Group | Approved | Today, low | Today, high |
 | --- | ---: | ---: | ---: |
-| Software and infrastructure | US$113.7m | US$46.7m | US$68.8m |
-| People, judgement and reach | US$125.6m | US$91.5m | US$111.1m |
+| Software and infrastructure | US$113.7m | US$31.8m | US$43.5m |
+| People, judgement and reach | US$125.6m | US$81.3m | US$95.8m |
 | Capital deployed | US$66.4m | US$66.4m | US$66.4m |
-| **Total** | **US$305.7m** | **US$204.6m** | **US$246.4m** |
+| **Total** | **US$305.7m** | **US$179.5m** | **US$205.8m** |
+
+The first edition used cautious settings and reached US$204.6m to US$246.4m, with software at US$46.7m to US$68.8m. Both sets are in the repository's history.
 
 ![Cost today by category](charts/cost-today-by-category.png)
 
@@ -78,19 +81,37 @@ Governance tooling is where the change is clearest, so we costed it from the bot
 
 OpenGov approved US$6.4m for governance tooling across 26 referenda. Polkassembly received US$2.8m over five referenda and Subsquare, with OpenSquare's related products, US$2.0m over eight. OpenGov.Watch's tracking and reports received US$1.0m. The two main interfaces do largely the same job, side by side, for the same voters. Both publish their code[^pa][^ss], and both serve many chains beyond these two, which these figures do not net off.
 
-A new network needs one governance interface for one chain. Our estimate of building and running it today, every figure an assumption:
+A new network needs one governance interface for one chain. Birdbrain is building one for Kabocha now, and we expect a working first version in about half an hour of agent time for under US$1 of inference. That is a first version, not a finished product. Testing it against real referenda, supporting the wallets people use and making it accessible take a few more days of one person's time. After that, the cost is running it, every figure an assumption:
 
 | Item | Year one | Each year after |
 | --- | ---: | ---: |
-| One experienced engineer directing agents, 10 to 14 weeks to build, then 0.2 to 0.3 of a person | US$35k to US$48k | US$36k to US$54k |
-| Agent and model spend | US$3k to US$12k | US$2k to US$6k |
-| Hosting, RPC and indexer | US$18k to US$48k | US$18k to US$48k |
-| Moderation and support, part time | US$15k to US$30k | US$15k to US$30k |
-| **Total** | **US$71k to US$138k** | **US$71k to US$138k** |
+| First working version: about 30 minutes, under US$1 of inference, plus the person's time | under US$200 | - |
+| Hardening against real referenda, wallets and accessibility, a few days to two weeks | US$3k to US$10k | - |
+| One person deciding what it should show and reviewing changes, 0.1 to 0.2 of their time | US$18k to US$50k | US$18k to US$50k |
+| Agent and model spend for upkeep | US$100 to US$1k | US$100 to US$1k |
+| Hosting, RPC and indexer on one server | US$3k to US$12k | US$3k to US$12k |
+| Moderation and support, part time | US$5k to US$15k | US$5k to US$15k |
+| **Total** | **US$29k to US$88k** | **US$26k to US$78k** |
 
-Against about US$1.2m a year for the two main interfaces (US$4.8m over four years), that is a fall of 88% to 94%. The factor model above is more cautious (77% to 86%) because it prices the same scope that was bought, including the duplication. The bottom-up figure prices one interface. The difference between the two numbers is a decision about scope, not a technical saving.
+Against about US$1.2m a year for the two main interfaces (US$4.8m over four years), that is a fall of 94% to 98%. The build itself has gone from a funded project to a rounding error: Polkassembly's first OpenGov development grant on Kusama was US$123k[^pa75]. What is left is a person's judgement about what voters need to see, and the server. The factor model above is more cautious (87% to 89%) because it prices the same scope that was bought, including the duplication. The bottom-up figure prices one interface. The difference between the two numbers is a decision about scope, not a technical saving.
 
-The same pattern runs through the rest of the kit a network needs. Polkadot paid US$33.3m in 2024 for governance tooling, explorers and indexing, wallets, developer tooling, infrastructure operations and audits. On our assumptions the same scope costs US$12.2m to US$17.6m today. Wallets show the duplication again: Nova (wallet and Spektr) US$4.4m, SubWallet US$3.4m, Talisman US$2.7m, with smaller amounts to several others.
+The same pattern runs through the rest of the kit a network needs. Polkadot paid US$33.3m in 2024 for governance tooling, explorers and indexing, wallets, developer tooling, infrastructure operations and audits. On our assumptions the same scope costs US$9.0m to US$11.4m today. Wallets show the duplication again: Nova (wallet and Spektr) US$4.4m, SubWallet US$3.4m, Talisman US$2.7m, with smaller amounts to several others.
+
+### The same software bill, as a small cohort
+
+A second way to check the model is to ask what it would cost to put a small team on the whole software scope for the full four years. The inputs are in [`inputs/cohort-assumptions.csv`](inputs/cohort-assumptions.csv) and the result in [`data/cohort-scenario.csv`](data/cohort-scenario.csv).
+
+| Line | Low | High |
+| --- | ---: | ---: |
+| 10 to 15 senior people, US$180k to US$250k a year each, four years | US$7.2m | US$15.0m |
+| Heavy agent use, US$20k to US$60k per person a year | US$0.8m | US$3.6m |
+| Independent audits and named reviewers, bought in | US$1.5m | US$3.0m |
+| Hardware, bandwidth and other non-labour costs, from the data | US$24.3m | US$24.3m |
+| **Total** | **US$33.8m** | **US$45.9m** |
+
+OpenGov approved US$113.7m for software and infrastructure, of which we estimate US$89.4m paid for people's time. A cohort of this size replaces that labour for US$9.5m to US$21.6m. The two methods agree within a few million dollars, and in both the largest remaining line is machines. We think the non-labour figure is itself high, because many of the infrastructure contracts it comes from had operating labour inside them.
+
+A cohort like this is not cheap because the people are cheap. It is cheap because there are few of them. What it cannot do on its own is decide which of the many things it could now build are worth building. That was the scarce input before, hidden inside large teams, and it is the scarce input now.
 
 ### What does not get cheaper
 
@@ -104,7 +125,7 @@ Put the numbers together and the cost of building a network has fallen a long wa
 
 OpenGov is a market for proposals. It rewards the ability to write a convincing request and to gather votes, and it pays on approval. It has no native way to price whether a spend kept value in the network after the money left. The record shows what that rule produces: duplicated interfaces, large outlays in a rising market, a treasury paid out mostly in a token that suppliers had to sell, and top-ups when the price fell. None of that needs bad faith to explain it. It is what the rules asked for.
 
-A new network can now get the software for a fraction of what these two paid. What it still needs is a credible answer to three questions before it spends anything:
+A new network can now get the software for a fraction of what these two paid, from a handful of people. What it still needs is a credible answer to three questions before it spends anything:
 
 1. **What should be built, and what should be left to others?** One governance interface, not two. One explorer contract with a clear service level, not a series of top-ups.
 2. **Why this, and how will we know?** A spend should name what it is expected to change and when that will be checked, before the vote.
@@ -140,4 +161,5 @@ Data and text: CC BY 4.0. Code: MIT.
 [^metr2026]: https://metr.org/blog/2026-02-24-uplift-update
 [^pa]: https://github.com/polkassembly/polkassembly
 [^ss]: https://github.com/opensquare-network/subsquare
+[^pa75]: https://kusama.subsquare.io/referenda/75
 [^ogw2024]: https://forum.polkadot.network/t/2024-polkadot-treasury-report/11658

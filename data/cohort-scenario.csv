@@ -1,0 +1,7 @@
+line,low_usd,high_usd,source
+people,7200000,15000000,inputs/cohort-assumptions.csv
+inference,800000,3600000,inputs/cohort-assumptions.csv
+external_signoff,1500000,3000000,inputs/cohort-assumptions.csv
+non_labour_from_data,24273346,24273346,"approved software spend x (1 - labour share), inputs/model-assumptions.csv"
+total,33773346,45873346,sum
+software_and_infrastructure_approved,113671736,113671736,data/summary-by-category.csv
